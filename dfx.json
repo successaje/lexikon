@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "lexikon_backend": {
+      "main": "src/lexikon_backend/main.mo",
+      "type": "motoko"
+    },
+    "lexikon_frontend": {
+      "dependencies": [
+        "lexikon_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/lexikon_frontend/src/index.html"
+      },
+      "source": [
+        "src/lexikon_frontend/assets",
+        "dist/lexikon_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
